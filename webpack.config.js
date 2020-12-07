@@ -1,8 +1,8 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -11,15 +11,53 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.scss$/,
+        enforce: 'pre',
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins() {
+                return [
+                  /* eslint-disable global-require */
+                  require('autoprefixer'),
+                /* eslint-enable global-require */
+                ];
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
+  devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebPackPlugin({
@@ -29,7 +67,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 8080,
+    port: 3000,
   },
-
 };
