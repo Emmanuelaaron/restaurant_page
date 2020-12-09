@@ -1,4 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 body{
-    background-color: yellow;
+    // background-color: yellow;
+}
+
+.logo {
+    font-size: 143px;
+}
+
+.home-font-size {
+    font-size: 30px;
+}
+
+.home-section {
+    background-image: url('../images/milad-b-fakurian-NFHRuqCT6bg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
 }
