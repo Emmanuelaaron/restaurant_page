@@ -6,6 +6,4 @@ import footer from './components/footer';
 const elem = document.getElementById('content');
 elem.appendChild(HomePage());
 elem.appendChild(footer());
-// elem.innerHTML="";
 
-// elem.removeChild(elem.lastElementChild)

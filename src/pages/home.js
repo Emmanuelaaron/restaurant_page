@@ -1,5 +1,5 @@
 import appends from '../functions/append';
-
+import menuu from '../pages/menu'
 const HomePage = () => {
   const mainPage = document.createElement('section');
   mainPage.classList.add('d-flex', 'justify-content-end', 'home-section');
@@ -8,6 +8,9 @@ const HomePage = () => {
   const header = document.createElement('h1');
   header.classList.add('logo', 'text-center');
   const menu = document.createElement('p');
+  menu.addEventListener('click', () => {
+    menuu()
+  })
   menu.classList.add('border-top', 'text-center', 'pt-5', 'pb-4', 'home-font-size', 'mt-5');
   const aboutUs = document.createElement('p');
   aboutUs.classList.add('border-top', 'pt-5', 'pb-4', 'text-center', 'home-font-size');
