@@ -1,19 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
-body{
-    // background-color: yellow;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-    font-size: 143px;
+  font-size: 143px;
 }
 
 .home-font-size {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .home-section {
-    background-image: url('../images/milad-b-fakurian-NFHRuqCT6bg-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: aliceblue;
+  background-image: url('../images/milad-b-fakurian-NFHRuqCT6bg-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+
+.upper_footer {
+  background-color: #a8b49e;
+  color: #152f4e;
 }
