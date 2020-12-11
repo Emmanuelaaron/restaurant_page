@@ -24,7 +24,6 @@ const footer = () => {
   lugogo.innerHTML = 'Lugogo';
 
   const footerMiddle = document.createElement('div');
-  // footer_middle.classList.add('ml-5', 'pl-5')
   const contact = document.createElement('h3');
   contact.innerHTML = 'CONTACT US';
   const email = document.createElement('p');

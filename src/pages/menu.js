@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+
 import header from '../components/header';
 import footer from '../components/footer';
 import appends from '../functions/append';
@@ -7,14 +9,9 @@ const restaurantMenu = () => {
   elem.innerHTML = '';
 
   const menu = document.createElement('section');
-  menu.classList.add(
-    // 'row',
-  );
 
   const menuMainContent = document.createElement('section');
   menuMainContent.classList.add(
-    // // 'container',
-    // 'bg-info',
     'row',
     'text-center',
     'mx-auto',

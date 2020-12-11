@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import 'bootstrap';
 import './scss/index.scss';
 import HomePage from './pages/home';

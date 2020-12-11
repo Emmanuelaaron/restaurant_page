@@ -1,5 +1,9 @@
+/* eslint-disable import/no-cycle */
+
 import appends from '../functions/append';
 import launch from '../index';
+import featuredproducts from '../pages/featuredproducts';
+import restaurantMenu from '../pages/menu';
 
 const header = () => {
   const header = document.createElement('nav');
@@ -41,11 +45,21 @@ const header = () => {
   menu.classList.add(
     'click',
   );
+  menu.addEventListener(
+    'click', () => {
+      restaurantMenu();
+    },
+  );
   menu.innerHTML = 'MENU';
 
   const featuredProducts = document.createElement('div');
   featuredProducts.classList.add(
     'click',
+  );
+  featuredProducts.addEventListener(
+    'click', () => {
+      featuredproducts();
+    },
   );
   featuredProducts.innerHTML = 'Featured Products';
 
