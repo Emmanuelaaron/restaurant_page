@@ -1,11 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-
 .logo {
   font-size: 143px;
 }
@@ -15,7 +9,7 @@ html {
 }
 
 .home-section {
-  background-image: url('../images/milad-b-fakurian-NFHRuqCT6bg-unsplash.jpg');
+  background-image: url('../images/saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
@@ -28,4 +22,29 @@ html {
 
 p:hover {
   cursor: pointer;
+}
+
+.nav-right {
+  font-style: italic;
+}
+
+.header {
+  color: #a6b49a;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.menu-heading {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 28px;
+  color: #152f4e;
+  font-weight: 700;
+}
+
+.images {
+  border-radius: 20px;
 }
