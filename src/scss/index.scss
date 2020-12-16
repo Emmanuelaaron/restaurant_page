@@ -1,0 +1,50 @@
+@import "~bootstrap/scss/bootstrap";
+
+.logo {
+  font-size: 143px;
+}
+
+.home-font-size {
+  font-size: 30px;
+}
+
+.home-section {
+  background-image: url('../images/saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+
+.upper_footer {
+  background-color: #a8b49e;
+  color: #152f4e;
+}
+
+p:hover {
+  cursor: pointer;
+}
+
+.nav-right {
+  font-style: italic;
+}
+
+.header {
+  color: #a6b49a;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.menu-heading {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 28px;
+  color: #152f4e;
+  font-weight: 700;
+}
+
+.images {
+  border-radius: 20px;
+}
